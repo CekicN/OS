@@ -1,0 +1,105 @@
+zad1:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu lista nazive svih datoteka koje u svom nazivu sadrze zadati string. 
+Putanja do direktorijuma i string koji se trazi se zadaju kao argumenti komandne linije.
+
+zad2:
+Koriscenjem programskog jezika C napisati Linux program koji prikazuje statistiku za zadati direktorijum. Putanja do direktorijuma se zadaje kao argument komandne
+linije. 
+
+zad3:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu pronalazi i stampa nazive svih datoteka koje u imenu sadrze string koji 
+se prosledjuje kao drugi argument komandne linije. Pretrazivanje se obavlja rekurzivno u zadatom direktorijumu i svim njegovim poddirektorijumima.
+
+zad4:
+Koriscenjem programskog jezika C napisati Linux program koji predstavlja verziju ls komande. Program kao argument ima ime direktorijuma, 
+a prikazuje listu direktorijuma u njemu, liniju po liniju, sa sledecim podacima: ime direktorijuma, broj datoteka koje se u njemu nalaze, velicinu u bajtovima.
+
+zad5:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu rekurzivno, maksimalno do dubine 3, brise sve regularne datoteke
+velicine vece od 10KB. Za brisanje datoteka koristiti rm komandu Linux operativnog sistema. 
+
+zad6:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu odredjuje naziv najvece datoteke. Ime direktorijuma se
+prosledjuje programu kao argument komandne linije. 
+
+zad7:
+Koriscenjem programskog jezika C napisati Linux program koji rekurzivno pretrazuje stablo zadatog direktorijuma u potrazi za zadatom datotekom ili direktorijumom. 
+
+zad8:
+Koriscenjem programskog jezika C napisati Linux program koji kao argument komandne linije prihvata jedan string i putanju do direktorijuma. 
+Program u tom direktorijumu i svim njegovim poddirektorijumima maksimalno do dubine 10 pronalazi sve regularne datoteke cija imena pocinju stringom koji je prvi 
+argument komandne linije i na ekranu stampa njihova imena.
+
+zad9:
+Korišćenjem programskog jezika C napisati Linux/UNIX program koji u zadatom direktorijumu i njegovim poddirektorijumima 
+nalazi sve datoteke koje imaju ekstenziju .sh i pokušava da ih izvrši (korišćenjem komande sh). 
+Putanja do direktorijuma koji se pretražuje (apsolutna ili relativna) se prosleđuju programu kao argument komandne linije.
+
+zad10:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu rekurzivno u svim njegovim poddirektorijumima
+odredjuje sve regularne datoteke cija je velicina veca od N bajtova i cija je apsolutna putanja duza od M karaktera. 
+N i M se takodje zadaju kao ulazni argumenti programa. Program na standardnom izlazu stampa apsolutne putanje do datoteka
+i njihove velicine u bajtovima.
+
+zad11:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu i njegovim poddirektorijumima (maksimalno do nivoa koji se zadaje 
+kao ulazni argument programa, ukoliko se za nivo zada 0 onda se stablo obilazi po citavoj dubini) odredjuje se i stampa prvih 10 linija iz svake regularne datoteke. 
+
+zad12:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (zadaje se kao ulazni argument programa) 
+odredjuje i brise pet najvecih regularnih datoteka. Za brisanje regularnih datoteka koristiti Linux komandu rm.
+
+zad13:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu i njegovim poddirektorijumima, maksimalno do treceg nivoa, 
+odredjuje i stampa imena svih regularnih datoteka koje su vece od 100KB, a manje od 750KB. 
+
+zad15:
+Koriscenjem programskog jezika C napisati Linux program koji  u zadatom direktorijumu (kao ulazni argument programa zadaje se 
+apsolutna putanja do direktorijuma) i njevoim poddirektorijumima odredjuje i imena svih regularnih datoteka koje su vece od 100KB
+i tako dobijeni spisak,sortiran po velicini datoteke u rastucem redosledu,stampa na standardni izlaz. 
+
+zad16:
+Korišćenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (putanja do direktorijuma se zadaje kao ulazni argument programa)
+rekurzivno nalazi pet najvećih regularnih datoteka. Program na kraju rada treba da odštampa putanje i veličine tih datoteka.
+
+zad17:
+Koriscenjem programskog jezika C napisati Linux program koji sinhronizuje sadrzaj dva direktorijuma. 
+Putanje do direktorijuma koji se sinhronizuju se zadaju kao ulazni argumenti programa. 
+Program za svaku regularnu datoteka iz prvog direktorijuma proverava da li postoji odgovarajuca datoteka u drugom direktorijuma (uporeduje ime 
+i velicinu datoteke). Ukoliko datoteka ne postoji, onda se ona kopira iz prvog u drugi direktorijum.
+
+zad18:
+Koriscenjem prog jez C napisati Linux prog koji pocesvsi od korenskog (root) direktorijuma, pronalazi
+sve reg datoteke cija je apsolutna putanja duza od 256 karaktera i cija je velicina manja od 2KB.
+
+zad19:
+Koriscenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu odredjuje
+i stampa naziv najmanje datoteke sa ekstenzijom .txr i najvece datoteke sa ekstenzijom .dat.
+Ime direktorijuma koji se pretrazuje se prosledjuje programu kao argument komandne linije.
+
+zad20:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji za unete donju i gornju granicu
+veličine (u bajtovima) sa tastature u zadatom direktorijumu određuje i štampa naziv najmanje
+datoteke sa ekstenzijom .c a čija veličina se nalazi u unetom opsegu. Ime direktorijuma koji se
+pretražuje se prosleđuje programu kao argument komandne linije.
+
+zad21:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji u zadatom direktorijumu
+direktorijumu i njegovim poddirektorijumima nalazi sve datoteke koje imaju ekstenziju .dat i vede su
+od neke zadate granice Ime direktorijuma koji se pretražuje i granica se prosleđuju programu kao
+argumenti komandne linije.
+
+zad22:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji za zadati direktorijum štampa
+imena svih regularnih datoteka koje se u njemu nalaze sortirane prema veličini datoteke. Ime
+direktorijuma koji se obrađuje i smer sortiranja (opadajudi ili rastudi) se prosleđuju programu kao
+argumenti komandne linije.
+
+zad23:
+Korišćenjem programskog jezika C napisati Linux program koji obilazi podstablo zadatog
+direktorijuma i određuje naziv i putanju do datoteka čija je dužina 0B.
+
+zad24:
+Na programskom jeziku C napisati Linux/UNIX program koji u zadatom folderu. Putanja (apsolutna
+ili relativna) do foldera se zadaje kao argument komandne linije, a program treba da odštampa broj
+regularnih datoteka koje su veće od 30KB.

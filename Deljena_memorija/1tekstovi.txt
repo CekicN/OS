@@ -1,0 +1,89 @@
+zad1:
+Koriscenjem programskog jezika C napisati Linux program koji se deli u dva procesa (proizvodjac-potrosac), koji komuniciraju koristeci ogranicen kruzni bafer
+u deljivoj memoriji, velicine 10 celih brojeva. Ovi procesi sinhronizuju svoje aktivnosti koriscenjem semafora. 
+
+zad2:
+Koriscenjem programskog jezika C kreirati tri Linux procesa koji za medjusobnu komunikaciju koriste deljenu memoriju velicine 1024 bajtova. 
+Prvi proces popunjava prvih 512 bajtova deljive memorije slucajno izabranim slovima u opsegu a-z. Nakon toga, drugi proces popunjava poslednjih 512 bajtova
+deljene memorije proizvoljno izabranim ciframa. Posto i drugi proces zavrsi generisanje podataka, treci proces kompletan sadrzaj deljene memorije upisuje u datoteku. 
+Ova sekvenca akcija se periodicno obavlja na svakih 15s.
+
+zad4:
+Koriscenjem programskog jezika C kreirati 2 Linux procesa. Prvi proces kreira u deljenom memorijskom segmentu matricu dimenzija NxM.
+Drugi proces u svakoj od kolona matrice pronalazi maksimalni element i stampa ga na ekranu. 
+
+zad5:
+Koriscenjem programskog jezika C kreirati program koji se deli u dva procesa. Proces roditelj cita sa tastature stringove i koristeci deljenu memoriju ih salje
+procesu detetu. Proces dete primljene stringove upisuje u datoteku stringovi.txt. Kada korisnik unese string "KRAJ" komunikacija se prekida. 
+
+zad6:
+Koriscenjem programskog jezika C napisati program koji kopira zadatu datoteku. Prvi argument komandne linije je naziv originalne datoteke, a drugi argument je
+naziv nove datoteke, koja ce biti kopija prve. Kopiranje se obavlja tako sto se program deli u dva procesa, prvi proces cita odredjeni broj bajtova iz datoteke i salje
+ih drugom procesu. Drugi proces bajtove iz deljene memorije upisuje u novu datoteku. 
+
+zad7:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji se deli u dva procesa a kreirani procesi komuniciraju deljenom memorijom. 
+   Roditeljski proces omogućava korisniku da unese string sa tastature i smešta ga u deljivu memoriju. 
+   Proces dete čita string iz deljive memorije i upisuje ga u tekstualnu datoteku izlaz.txt. 
+   String koji se unosi je maksimalne dužine 80 karaktera. 
+   Proces roditelj posle unošenja stringa sa tastature čeka proizvoljan broj sekundi pre upisa stringa u deljenu memoriju.
+
+zad8:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji kreira jedan dodatni proces.
+Ova dva procesa komuniciraju deljenom memorijom veličine 2 int broja. 
+Roditeljski proces učitava jedan broj sa tastature a zatim taj broj i njegovu trostruku vrednost upisuje u deljivu memoriju . 
+Proces dete čita ove brojeve iz deljive memorije i na ekranu štampa njihov zbir. Ovaj ciklus se ponavlja sve dok se sa tastature ne unese KRAJ.
+
+zad9:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji kreira dva dodatna procesa. 
+Prvi proces dete čita liniju po liniju iz datoteke ulaz1.txt. 
+Drugi proces dete čita liniju po liniju iz datoteke ulaz2.txt. 
+Oba procesa deteta prosleđuju pročitane linije prosleđuju roditeljskom procesu koristeći deljenu memoriju. 
+Roditeljski proces primljene linije teksta od oba procesa deteta upisuje u tekstualnu datoteku izlaz.txt naizmenično.
+
+zad10:
+Koriščenjem programskog jezika C napisati Linux/UNIX program koji kao argument komandne linije prihvata naziv tekstualne datoteke u tekućem direktorijumu 
+koja sadrži više linija teksta. Program se potom deli u dva procesa pri čemu proces roditelj otvara tekstualnu datoteku i čita iz nje liniju po liniju  
+teksta i korišćenjem deljene memorije pročitanu liniju prosleđuje procesu detetu. 
+Proces dete štampa na standardnom izlazu linije teksta koje čita iz deljene memorije u ispravnom redosledu.
+
+zad11:
+Koriscenjem programskog jezika C napisati Linux program koji se deli na dva procesa.
+Proces roditelj sa standardnig ulaza cita liniju teksta i koriscenjem deljene memorije procitane
+linije teksta prosledjuje procesu detetu.Proces dete stampa na standardnom izlazu linije teksta
+koje prihvata iz deljene memorije.Obezbediti da proces dete stampa linije teksta onim 
+redosledom kako se javljaju u tekstualnoj datoteci.Ovaj proces se ponavlja sve dok korisnik na
+standardnom ulazu ne unese rec "KRAJ".
+
+zad12:
+Koriscenjem programskog jezika C napisati Linux program koji omogucava da dva procesa komuniciraju i sinhronizuju svoje izvrsavanje
+koriscenjem signala i deljene memorije. Prvi proces po slucajnom principu kreira 1024 slucajnih vrednosti i smesta ih u deljeni memorijski prostor.
+Kada izgenerise brojeve, obavestava o tome drugi proces, slanjem signala SIGUSR1 i pauzira svoje izvrsavanje. Kada drugi proces primi signal, 
+on sadrzaj deljenog memorijskog prostora stampa na standardni izlaz, salje prvom procesu signal SIGUSR2 i nakon toga pauzira svoje izvrsavanje. 
+Po prijemu signala SIGUSR2, prvi proces ponovo startuje svoje izvrsenje. Postupak se ponavlja 4096 puta. Nakon toga se procesi zavrsavaju.
+
+zad13:
+Koriscenjem programskog jezika C kreirati 2 LINUX procesa koji stogo naizmenivcno komunicarau
+putem deljivog memorijskog segmenta dimenzija 10 celobrojnih vresnosti. Prvi proces generise
+10 slucajnih celobrojnih vrednosti i upisuje ih u memoriju. Drugi proces cita vresnosti i 
+stampa na standardni izlaz.
+
+zad14:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji se deli u dva procesa. Prvi
+process periodično (100 puta) generiše dve slučajne celobrojne vrednosti. Drugi process na ekranu
+štampa generisane brojeve, njihovu sumu i ukupnu sumu svih prethodno generisanih brojeva. Ova
+dva procesa komuniciraju deljenom memorijom odgovarajude veličine. Sinhronizovati rad ova dva
+procesa korišdenjem semafora.
+
+zad15:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji se deli u dva procesa. Prvi
+process periodično (100 puta) generiše dve slučajne celobrojne vrednosti. Drugi process na ekranu
+štampa generisane brojeve, njihovu sumu i ukupnu sumu svih prethodno generisanih brojeva. Ova
+dva procesa komuniciraju deljenom memorijom odgovarajude veličine. Sinhronizovati rad ova dva
+procesa korišdenjem semafora.
+
+zad16:
+Koriscenjem programskog jezika C kreirati dva Linux/UNIX procesa. Prvi proces kreira u deljenom memorijskom
+segmentu matricu dimenzija MxN popunjenu slučajnim vrednostima. Drugi proces u svakoj koloni
+matrice pronalazi maksimalni element i njegovu vrednost štampa na ekranu. Treći proces u svakoj vrsti
+nalazi maksimalni element i njegovu vrednost štampa na ekranu.

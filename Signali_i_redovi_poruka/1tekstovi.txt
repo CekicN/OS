@@ -1,0 +1,172 @@
+zad1:
+Koriscenjem programskog jezika C napisati Linux program koji onemogucava da se tekuci proces prekine jednim pritiskom kombinacije tastera CTRL+C. 
+Proces se prekida tek kada se ova kombinacija tastera pritisne dva puta.
+
+zad2:
+Koriscenjem programskog jezika C napraviti Linux program koji moze da se prekine samo ako se 5 puta uzastopno pritisne kombinacija CTRL-C.
+Ukoliko korisnik pritisne kombinaciju CTRL-Z, onda se na ekranu ispisuje poruka koliko puta do sada je pritisnuto CTRL+C.
+
+zad3:
+Koriscenjem programskog jezika C napisati Linux program koji od korisnika ocekuje da unese korisnicko ime. 
+Ukoliko korisnik ne unese nista posle 30 sekundi, proces obavestava korisnika da je vreme isteklo i izlazi.
+
+zad4:
+Koriscenjem programskog jezika C napisati Linux program koji svom procesu detetu, koriscenjem redova poruka, prosledjuje ulaz koji prima preko tastature, 
+a proces dete dobijene poruke stampa na ekranu. Unosom teksta "quit" se prekida rad programa.
+
+zad5:
+Koriscenjem programskog jezika C napisati Linux program koji simulira problem proizvodjac/potrosac koriscenjem redova poruka. 
+Glavni program se deli u dva procesa. Proizvodjac kreira N slucajnih pozitivnih celih brojeva i salje ih drugom procesu.
+N se odredjuje tokom izvrsenja, takodje kao slucajan broj. Po zavrsetku slanja, prvi proces salje -1 za kraj. 
+Drugi proces preuzima brojeve i stampa ih na standardnom izlazu. 
+
+zad6:
+Koriscenjem programskog jezika C napisati Linux program koji ucitava podatke iz tekstualne datoteke cela red po red, a zatim koriscenjem reda poruka
+sve parne redove salje procesu koji konvertuje sva slova u velika i upisuje u datoteku pola1, a neparne redove procesu koji konvertuje sva slova
+u mala i upisuje u datoteku pola 2.
+
+zad7:
+Koriscenjem programskog jezika C napisati Linux program koji kreira dva dodatna procesa. 
+Proces roditelj sa procesima decom komunicira koriscenjem signala SIGUSR1 i SIGUSR2. 
+Na svakih 10 sekundi, proces roditelj salje signal SIGUSR1 svakom procesu detetu. 
+Kada procesi deca prime signal SIGUSR1, pristupaju generisanju tekstualnih datoteka sa podacima. 
+Prvi proces dete generise datoteku prva.txt koja sadrzi 1000 slucajnih celih brojeva, 
+a drugi proces dete generise datoteku druga.txt koja sadrzi 1000 slucajnih malih slova. 
+Svaki proces dete, kada zavrsi sa generisanjem datoteke, obavestava o tome proces roditelj
+slanjem signala SIGUSR2. Kada proces roditelj primi signale SIGUSR2 od oba deteta, na standardni
+izlaz stampa sadrzaje obe datoteke. Citav postupak se ponavlja 20 puta. 
+
+zad8:
+ Koriscenjem programskog jezika C napisati Linux program koji omogucava da dva procesa komuniciraju
+i sinhronizuju svoje izvrsavanje koriscenjem signala.Prvi proces po slucajnom principu kreira
+1024 celobrojne vrednosti i smesta ih u binarnu datoteku prenos.dat. Kada izgenerise brojeve,
+obavestava o tome drugi proces,slanjem signala SIGUSR1 i pauzira svoje izvrsavanje.Kada drugi
+proces primi signal on sadrzaj datoteke prenos.dat prikazuje na standardnom izlazu,salje prvom
+procesu signal SIGUSR2 i nakon toka pauzira svoje izvrsavanje.Po prijemu signala SIGUSR2,prvi 
+proces ponovo startujr citav postupak.Postupak se ponavlja 4096 puta.Nakon toga se oba procesa zavrsavaju. 
+
+zad9:
+Na programskom jeziku C napisati program koji kreira dodatni proces dete.Proces roditelj sa
+standardnog ulaza prihvata podatke o studentima (broj indeksa i ime i prezime studenta)
+i koriscenjem reda poruka te informacije salje procesu detetu. Proces dete ima zadata,da 
+nakon sto primi podatke o poslednjem studentu,sortira studente po broju indeksa i tako 
+dobijeni spisak odstampa na standardnom izlazu.
+
+zad10:
+Koriscenjem programskog jezika C napisati dva Linux procesa koja komuniciraju koriscenjem redova poruka. 
+Prvi proces cita stringove sa tastature i upisuje ih u red poruka sve dok se na tastaturi ne unese rec KRAJ. 
+Drugi proces cita stringove iz reda poruka i prikazuje ih na standardnom izlazu. 
+U sistemu postoji i treci proces koji kreira red poruka i pokrece ova dva procesa, a zatim ceka da se oni zavrse,
+i tek nakon toga brise red poruka i zavrsava svoje izvrsenje. 
+
+zad11:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji svom procesu detetu 
+korišćenjem redova poruka identifikovan brojem 12010 prosleđuje karaktere unete sa tastature. 
+Poruke su tipa 4. Proces dobijene vrednosti upisuje u datoteku karakteri.txt. 
+Komunikacija se prekida kada korisnik unese bilo koji broj.
+
+zad12:
+Koriscenjem programskog jezika C napisati Linux program koji kreira dodatni proces dete. 
+Ova dva procesa komuniciraju dvosmerno koriscenjem jednog reda poruka. Prvi proces sa tastature cita cele brojeve
+u vidu stringa i salje ih drugom procesu koriscenjem reda poruka. Drugi proces tako dobijeni broj mnozi sa 2, 
+i rezultat vraca prvom procesu. Prvi proces tako dobijeni broj stampa na ekranu. Ovaj postupak se ponavlja 10 puta. 
+
+zad14:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji može da se prekine samo ako se kombinacija tastera Ctrl-C pritisne pet puta za redom. 
+Ukoliko korisnik pritisne kombinaciju tastera Ctrl-Z dva puta zaredom program na ekranu ispisuje koliko puta do sada je pritisnuto Ctrl-C.
+
+zad15:
+Korišćenjem programskog jezika C napisati Linux/UNIX program koji svom procesu detetu korišćenjem redova poruka prosleđuje stringove koje prihvata sa tastature, 
+a proces dete primljene stringove upisuje u datoteku izlaz.txt. Komunikacija se prekida kada korisnik sa tastature unese reč KRAJ. 
+
+zad16:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji svom procesu detetu korišćenjem redova poruka identifikovan brojem 12001 prosleđuje 
+celobrojne vrednosti različite od nule koje čita sa tastature. Poruke su tipa 22. 
+Proces dobijene vrednosti sumira dok ne dobije vrednost 0. Tada na ekranu štampa sumu i izlazi. 
+
+zad17:
+Korišćenjem programskog jezika C napisati UNIX/Linux program koji od korisnika očekuje da sa tastature unese korisničko ime i lozinku. 
+Ukoliko korisnik nakon unosa korisnickog imena ne unese lozinku u roku od 60 sekundi proces
+obaveštava korisnika da je vreme za unos lozinke isteklo i izlazi.
+
+zad18:
+Korišćenjem programskog jezika C napisati Linux/UNIX program koji kreira dodatni process sa kojim komunicira dvosmerno korišćenjem jednog reda poruka. 
+Proces roditelj iz datoteke čije je ime prosleđeno kao argument komandne linije čita liniju po liniju teksta i svaku liniju šalje procesu detetu u posebnoj poruci.
+Proces dete u svakoj primljenoj liniji prebrojava broj pojavljivanja velikih slova abecede i procesu roditelju vraća kroz isti red poruka za svaku analiziranu 
+liniju teksta kroz posebnu poruku redni broj linije i broj pojavljivanja velikih slova. Glavni program te podatke štampa na ekranu 
+(redni broj linije i broj pojavljivanja velikih slova). Kada se analiziraju sve linije teksta iz datoteke glavni program na ekranu treba da odštampa “KRAJ”. 
+
+zad19:
+Korišćenjem programskog jezika C napisati Linux program koji treba da detektuje i obradi signale tipa SIGALRM i SIGINT. 
+Kada proces detektuje signal tipa SIGALRM on korišćenjem reda poruka (koji je definisan ključem 10500) šalje poruku (tip 20) koja sadrži informaciju o tekućem vremenu. 
+U slučaju pojave SIGINT signala (pritisnuta kombinacija tastera Ctrl+C) proces suspenduje svoje izvršavanje na 5 sekundi a nakon toga briše red poruka 
+(koji je koristio za slanje informacija o vremenu) i prekida svoje izvršavanje. 
+
+zad20:
+Koriscenjem programskog jezika C napisati Linux program koji se moze prekinuti tako sto se u
+roku od 1s kombinacijom tastera CTRL+C pretidne pet puta.Ukoliko istekne 1s,prethodno pritisnute
+kombinacije tastera CTRL+C se ponistavaju.
+
+zad21:
+Koriscenjem programskog jezika C napisati Linux program koji ucitava podatke iz tekstualne 
+datoteke poruke (red po red) i zatim koriscenjem redova poruka sve parne redove salje procesu
+koji konvertuje sva slova u velika,a sve neparne redove salje procesu koji konvertuje sva slova u mala.
+Drugi i treci proces konvertovane linije upisuju u datoteku sredjeno.txt,pri cemu treba voditi
+racuna da se linije upisuju u pravilnom redosledu.
+
+zad22:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji od korisnika očekuje da unese
+username i password. Pošto korisnik unese username (bilo koja reč) ima 5 sekundi da unese i
+password (takodje bilo koja reč). Ukoliko u tom roku korisnik unese i password program štampa
+poruku “Uneli ste username i password.”. Ukoliko istekne 5 sekundi od unosa username-a program
+štampa poruku “Vreme je isteklo!” i izlazi. Onemoguditi prekid izvršenja programa kombinacijom
+taster Ctrl-C.
+
+zad23:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji sa tastature učitava username i
+zatim ga korišdenjem redova poruka šalje drugom procesu. Drugi proces za uneti username prvom
+procesu vrada password (drugi proces za username pera vrada password peric, a za svaki drugi
+username vrada NOT AVAILABLE). Zadatak rešiti korišdenjem JEDNOG reda poruka.
+
+zad24:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji se deli u dva procesa koji
+komuniciraju korišdenjem reda poruka. Prvi proces periodično generiše N celih brojeva (N je u opsegu
+od 1 do 10) i drugom procesu korišdenjem reda poruka šalje N i generisane brojeve. Drugi proces po
+prijemu poruke štampa generisane celobrojen vrednosti na standardnom izlazu. Čitavu komunikaciju
+treba ponoviti bar 5 puta.
+
+zad25:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji je nemogude prekinuti ili
+suspendovati korišdenjem kombinacije tastera Ctrl-C i Ctrl-Z. Proces je mogude prekinuti samo ukoliko
+se ove kombinacija tastera pritisnu u određenoj sekvenci (Npr. Ctrl-C, Ctrl-C, Ctrl-Z, Ctrl-C). Ukoliko
+korisnik pritisne pogrešnu kombinaciju tastera, sekvenca se resetuje i korisnik se o tome obaveštava.
+
+zad26:
+Korišdenjem programskog jezika C napisati Linux/UNIX program koji sa tastature učitava username i
+zatim ga korišdenjem redova poruka šalje drugom procesu. Drugi proces za uneti username prvom
+procesu vrada password (drugi proces za username pera vrada password peric, a za svaki drugi
+username vrada NOT AVAILABLE). Zadatak rešiti korišdenjem JEDNOG reda poruka.
+
+zad27:
+Korišćenjem programskog jezika C kreirati dva Linux procesa koji komuniciraju korišćenjem deljive
+memorije i signala. Prvi proces očitava poruku sa standardnog ulaza, smešta je u deljivu memoriju i o
+tome obaveštava drugi proces slanjem signala SIGUSR1. Drugi proces po prijemu signala, očitava
+sadržaj deljive memorije i štampa ga na standardnom izlazu. Uzeti da je maksimalana veličina poruke
+koja može da se pošalje 1024B.
+
+zad28:
+Korišćenjem programskog jezika C napisati Linux/UNIX program koji se ne može prekinuti
+kombinacijom tastera Ctrl-C, već samo broji koliko puta je ova kombinacija tastera pritisnuta. Program
+svakih 10sec na ekranu štampa koliko puta do tada je pritisnuta kombinacija tastera Ctrl-C. Po isteku
+30sec program izlazi i štampa ukupan broj pritisaka kombinacije tastera Ctrl-C. U glavnom programu
+simulirati neki vremenski zahtevan posao beskonačnom petljom.
+
+zad29:
+Korišćenjem programskog jezika C napisati Linux/UNIX program koji prebrojava linije u
+tekstualnoj datoteci čije je ime zadato kao argument komandne linije. Korišćenjem signala obezbediti
+da program prekine izvršenje ukoliko se linije ne prebroje u roku od 2 sekunde.
+
+zad30:
+Korišćenjem programskog jezika C napisati Linux/UNIX program koji prebrojava linije u
+tekstualnoj datoteci čije je ime zadato kao argument komandne linije. Korišćenjem signala obezbediti
+da se program ne može prekinuti kombinacijom tastera Ctrl-C.
